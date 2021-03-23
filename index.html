@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: var(--color-background);
+            color: var(--color-font);
+            transition: all .5s;
+        }
+
+        .light-var-list {
+            --color-background: #fff;
+            --color-font: #000;
+            --color-h: rgb(116, 116, 116);
+            --color-link: rgb(111, 0, 255);
+            --color-btn: #fff;
+        }
+
+        .dark-var-list {
+            --color-background: rgb(63, 63, 63);
+            --color-font: rgb(255, 255, 255);
+            --color-h: rgb(212, 212, 212);
+            --color-link: rgb(66, 110, 255); 
+            --color-btn: rgb(110, 110, 110);
+        }
+
+        a {
+            color: var(--color-link);
+        }
+
+        h1,h2,h3,h4,h5,h6 {
+            color: var(--color-h);
+        }
+
+        button {
+            background-color: var(--color-btn);
+            color: var(--color-font);
+            border-width: 1px;
+        }
+
+    </style>
+</head>
+<body class="light-var-list">
+    <head>
+        <button id="light-btn">light</button>
+        <button id="dark-btn">dark</button>
+    </head>
+    <article>
+        <h1>hello world</h1>
+        <a href="https://google.com">https://google.com</a> <br/>
+        this is test article
+    </article>
+    <script>
+        const $ = (q) => document.querySelector(q)
+        $('#light-btn').addEventListener('click', (e) => {
+            $('body').classList.remove('dark-var-list')
+        })
+        $('#dark-btn').addEventListener('click', (e) => {
+            $('body').classList.add('dark-var-list')
+        })
+
+    </script>
+</body>
+</html>
