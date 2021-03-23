@@ -6,4 +6,4 @@
 原理就是利用CSS中的重叠覆盖规则，动态修改theme，实现此效果。
 
 效果：
-![demo]("https://github.com/kilicmu/dark-mode-demo/blob/main/assets/demo.gif")
+![demo](assets/demo.gif)
